@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Love Calculater</title>
+	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<style type="text/css">
+		body{
+			background-image:linear-gradient( rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url('love1.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+			height: 100vh;
+			position: relative;
+		}
+
+	/*	if u wanna any div with in another div in center*/
+		header{
+			width: 100%;
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform: translate(-50%,-50%);
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="card w-50 m-auto text-center">
+  <div class="card-header text-uppercase bg-danger text-white">love calculator</div>
+  <div class="card-body">
+  	<form class="form-inline w-75 m-auto">
+  		<div class="form-group">
+  			<input type="text" name="" id="name" placeholder="Your Name" class="form-control text-center" autocomplete="off">
+
+  		</div>
+  		<div><span class="pl-4 pr-4">+</span></div>
+  		<div class="form-group">
+  			<input type="text" name="" id="lname" placeholder="Love Name" class="form-control text-center" autocomplete="off">
+  			
+  		</div>
+  	</form><br>
+  	<div class="w-75 m-auto">
+  		<button class="btn btn-success w-50" onclick="checklovevalue();">Check</button>
+  	</div><br>
+  	<div class="">
+  		<input type="text" name="" id="lovedata" class="form-control text-center w-25 m-auto" placeholder="Love Percentage">
+  	</div>
+  		
+  	</div>
+  
+  <div class="card-footer text-capitalize">god bless your relationship&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;<span class="text-info font-weight-bold">Created By #Deepmala</span></div>
+</div>
+	</header>
+	<script type="text/javascript">
+		function checklovevalue()
+		{   
+			var name=document.getElementById('name').value;
+			var lname=document.getElementById('lname').value;
+
+			if(name=="")
+			{
+				alert('Please Enter Your Name');
+			}
+			else if(name.length<=2)
+			{
+				alert('Atleast Enter Minimum length Three');
+
+			}
+			else if(!isNaN(name))
+			{
+				alert('Numbers Are Not Allow');
+			}
+			else if(lname=="")
+			{
+				alert('Please Enter Your Lover Name');
+			}
+			else if(lname.length<=2)
+			{
+				alert('Atleast Enter Minimum length Three');
+
+			}
+			else if(!isNaN(lname))
+			{
+				alert('Numbers Are Not Allow');
+			}
+			else{
+            var lovedata=Math.random() * 100;
+			lovedata=Math.floor(lovedata);
+			document.getElementById('lovedata').value=lovedata + "%";
+
+			}
+		}
+	</script>
+	
+</body>
+</html>
